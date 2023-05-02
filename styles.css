@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+  /* Colors */
+  --color-darkText: #2f1c6a;
+  --color-grey: #727586;
+  --color-btn: #673de6;
+  --color-pink: #fc5185;
+  /* Font Size */
+  --fs-title: 24px;
+  --fs-price: 48px;
+  --fs-para: 14px;
+  --fs-btnAllfeat: 16px;
+  --fs-rupeeMonth: 20px;
+}
+
+/* UNIVERSAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  list-style-type: none;
+}
+
+h1 {
+  text-align: center;
+  padding: 70px 0;
+}
+
+.card-container {
+  width: 85%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ALL CARDS */
+.cards {
+  margin: auto;
+  width: 350px;
+  border: 1px rgba(128, 128, 128, 0.281) solid;
+  border-radius: 5px;
+  padding: 31px 23px;
+  transition: 0.4s;
+}
+
+.cards:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  transform: scale(1.1, 1.1);
+  transition: 0.4s;
+}
+
+/* PACK INFO CONTAINER */
+.pack-info {
+  text-align: center;
+  border-bottom: 2px solid rgba(207, 221, 228, 0.87);
+  padding-bottom: 20px;
+}
+
+.package-name {
+  font-size: var(--fs-title);
+  color: var(--color-darkText);
+}
+
+.package-for {
+  font-size: var(--fs-para);
+  color: var(--color-darkText);
+  font-weight: 100;
+  margin: 8px auto 40px auto;
+}
+
+.card-3 .package-for {
+  width: 80%;
+  margin-bottom: 21px;
+}
+
+/*>> DISCOUNT */
+.discount {
+  margin: 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-para);
+}
+
+.discount .text-strike {
+  text-decoration: line-through;
+  color: var(--color-grey);
+}
+
+.discount .save-percentage {
+  padding: 6px 15px;
+  background-color: #ebe4ff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #5025d1;
+}
+
+.card-2 .save-percentage {
+  color: var(--color-pink);
+  background-color: #ffeaef;
+}
+
+/*>> PRICE */
+.price {
+  color: var(--color-darkText);
+  /* margin-bottom: 50px; */
+}
+
+.price :first-child,
+.price :last-child {
+  font-size: var(--fs-rupeeMonth);
+}
+
+.price :nth-child(2) {
+  font-size: var(--fs-price);
+  font-weight: 600;
+}
+
+.free {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.card-2 .free {
+  color: var(--color-pink);
+}
+
+.card-3 .free {
+  color: var(--color-btn);
+}
+
+/* >> BUTTON */
+.btn {
+  background-color: var(--color-btn);
+  color: white;
+  font-weight: 500;
+  padding: 12px 16px;
+  width: 80%;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  font-size: var(--fs-btnAllfeat);
+  cursor: pointer;
+}
+
+.card-2 .btn {
+  background-color: var(--color-pink);
+}
+
+.renew-price {
+  font-size: var(--fs-para);
+  color: var(--color-grey);
+}
+
+/* FEATURES CONTAINER */
+.features {
+  padding-top: 30px;
+  color: var(--color-darkText);
+}
+
+.feature-list-title {
+  font-size: 18px;
+  color: var(--color-darkText);
+  padding-bottom: 10px;
+}
+
+.feautures-container li {
+  margin-top: 10px;
+}
+
+.feautures-container li i {
+  color: rgb(7, 177, 7);
+  margin-right: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.features-all {
+  display: grid;
+  place-items: center;
+  margin-top: 25px;
+}
+
+.features-all a {
+  font-size: var(--fs-btnAllfeat);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-2 {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: -25px;
+  right: 46px;
+  background-color: var(--color-pink);
+  border-radius: 30px;
+  padding: 8px 20px;
+  width: 250px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 866px) {
+  .cards:hover {
+    transform: none;
+  }
+
+  .cards {
+    margin-top: 20px;
+  }
+}
+
+/* SKIP */
+footer {
+  text-align: center;
+  padding: 30px;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+}
