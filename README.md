@@ -1,3 +1,5 @@
-# responsivePricingCard
+# Responsive Pricing Card | Hostinger Design
+By using HTML, CSS & JavaScript
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-xvnxkx)
+# Live
+https://pricing-card-hostinger.netlify.app/
